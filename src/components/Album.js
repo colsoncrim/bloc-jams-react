@@ -17,6 +17,14 @@ class Album extends Component {
    render() {
      return (
        <section className="album">
+        {
+          this.state.album.songs.map( (song, index) =>
+            <tr>
+             <td>{song.title}</td>
+           </tr> )
+
+
+        }
          <section id="album-info">
            <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
            <div className="album-details">
@@ -32,6 +40,7 @@ class Album extends Component {
             <col id="song-duration-column" />
           </colgroup>
           <tbody>
+
           </tbody>
         </table>
       </section>
