@@ -44,6 +44,14 @@ class Album extends Component {
    }
  }
 
+ mouseOver(song) {
+   this.setState({hovering: song});
+ }
+
+ mouseOut(song) {
+   this.setState({hovering: false});
+ }
+
 
    render() {
      return (
@@ -65,7 +73,28 @@ class Album extends Component {
           <tbody>
             {this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
+                <td className="songNumber">
+                {(() => {
+                  if )this.state.hovering == song && this.state.hovering != this.state.currentSong) {
+                    return (
+                      <span>
+                        <ion-icon name="play-circle"></ion-icon>
+                      </span>
+                    )
+                  }
+                  else if (this.state.isPlaying && this.state.currentSong == song) {
+                    return (
+                      <span>
+                        <ion-icon name="pause"></ion-icon>
+                      </span>
+                    )
+                  }
+                  else {
+                    return (index + 1)
+                  };
+                }) ()}
               <td>{song.title}</td>
+              <td>{song.duration}</td>
               </tr>
             )}
           </tbody>
@@ -74,5 +103,6 @@ class Album extends Component {
      );
    }
  }
+
 
 export default Album;
