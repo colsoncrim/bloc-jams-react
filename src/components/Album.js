@@ -73,7 +73,9 @@ onMouseLeave(song) {
           </colgroup>
           <tbody>
             {this.state.album.songs.map( (song, index) =>
-              <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
+              <tr className="song" key={index} onClick={() => this.handleSongClick(song)}
+              onMouseEnter={() => this.onMouseEnter(song)}
+              onMouseLeave={() => this.onMouseLeave(song)}>
                 <td className="songNumber">
                 {(() => {
                   if (this.state.hover === song && this.state.hover !== this.state.currentSong) {
@@ -84,6 +86,11 @@ onMouseLeave(song) {
                   else if (this.state.isPlaying && this.state.currentSong === song) {
                     return (
                       <span className="ion-md-pause"></span>
+                    )
+                  }
+                  if (!this.state.isPlaying && this.state.currentSong === song) {
+                    return (
+                      <span className="ion-md-play"></span>
                     )
                   }
                   else {
