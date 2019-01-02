@@ -12,7 +12,8 @@ class Album extends Component {
    this.state = {
      album: album,
      currentSong: album.songs[0],
-     isPlaying: false
+     isPlaying: false,
+     hover: true
    };
 
    this.audioElement = document.createElement('audio');
@@ -38,20 +39,20 @@ class Album extends Component {
    const isSameSong = this.state.currentSong === song;
    if (this.state.isPlaying && isSameSong) {
      this.pause();
-   } else {
+   }
+   else {
      if (!isSameSong) { this.setSong(song); }
      this.play();
    }
  }
 
- mouseOver(song) {
-   this.setState({hovering: song});
- }
+onMouseEnter(song) {
+  this.setState({hover: song});
+}
 
- mouseOut(song) {
-   this.setState({hovering: false});
- }
-
+onMouseLeave(song) {
+  this.setState({hover: false});
+}
 
    render() {
      return (
@@ -77,16 +78,12 @@ class Album extends Component {
                 {(() => {
                   if (this.state.hover === song && this.state.hover !== this.state.currentSong) {
                     return (
-                      <span>
-                        <ion-icon className="play-circle"></ion-icon>
-                      </span>
+                      <span className="ion-md-play"></span>
                     )
                   }
                   else if (this.state.isPlaying && this.state.currentSong === song) {
                     return (
-                      <span>
-                        <ion-icon className="pause"></ion-icon>
-                      </span>
+                      <span className="ion-md-pause"></span>
                     )
                   }
                   else {
@@ -94,7 +91,6 @@ class Album extends Component {
                   };
                 }) ()}
               <td>{song.title}</td>
-              <td>{song.duration}</td>
               </td>
               </tr>
             )}
@@ -104,6 +100,5 @@ class Album extends Component {
      );
    }
  }
-
 
 export default Album;
