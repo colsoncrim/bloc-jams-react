@@ -75,17 +75,17 @@ class Album extends Component {
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
                 <td className="songNumber">
                 {(() => {
-                  if )this.state.hovering == song && this.state.hovering != this.state.currentSong) {
+                  if (this.state.hover === song && this.state.hover !== this.state.currentSong) {
                     return (
                       <span>
-                        <ion-icon name="play-circle"></ion-icon>
+                        <ion-icon className="play-circle"></ion-icon>
                       </span>
                     )
                   }
-                  else if (this.state.isPlaying && this.state.currentSong == song) {
+                  else if (this.state.isPlaying && this.state.currentSong === song) {
                     return (
                       <span>
-                        <ion-icon name="pause"></ion-icon>
+                        <ion-icon className="pause"></ion-icon>
                       </span>
                     )
                   }
@@ -95,6 +95,7 @@ class Album extends Component {
                 }) ()}
               <td>{song.title}</td>
               <td>{song.duration}</td>
+              </td>
               </tr>
             )}
           </tbody>
