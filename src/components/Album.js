@@ -15,6 +15,7 @@ class Album extends Component {
      currentSong: album.songs[0],
      currentTime: 0,
      duration: album.songs[0].duration,
+     volume: 0,
      isPlaying: false,
      hover: true
    };
@@ -92,6 +93,22 @@ handleTimeChange(e) {
   this.setState({ currentTime: newTime });
 }
 
+handleSetVolume(e) {
+  this.audioElement.volume = e.target.value;
+  this.setState({volume: e.target.value});
+}
+
+formatTime(time) {
+  if (!isNaN(time)) {
+    let min = Math.round(Math.floor(time / 60));
+    let sec = Math.round(time % 60);
+    let mss = ('0' + min).slice(-2) + ':' + ('0' + sec).slice(-2);
+    return mss;
+  } else {
+    return "-:--";
+  }
+}
+
 
 onMouseEnter(song) {
   this.setState({hover: song});
@@ -155,10 +172,13 @@ onMouseLeave(song) {
           currentSong={this.state.currentSong}
           currentTime={this.audioElement.currentTime}
           duration={this.audioElement.duration}
+          volume={this.audioElement.volume}
           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
           handlePrevClick={() => this.handlePrevClick()}
           handleNextClick={() => this.handleNextClick()}
           handleTimeChange={(e) => this.handleTimeChange(e)}
+          handleSetVolume={(e) => this.handleSetVolume(e)}
+          formatTime={(time) => this.formatTime(time)}
         />
       </section>
      );
