@@ -34,7 +34,10 @@
 body {
     background-image: linear-gradient(to bottom right, #2C75FF, #00FFFF);
     font-family: Roboto;
+    height:200vh;
+    color: white;
 }
+
 
 .landing {
 
@@ -49,13 +52,24 @@ body {
 }
 
 .point-1 {
-
+  display: inline-block;
+  width: 200px;
+  height: 20px;
+  margin-right: 90px;
+  position: relative;
 }
 
 .point-2 {
-
+  display: inline-block;
+  width: 200px;
+  height: 20px;
+  margin-right: 90px;
+  position: relative;
 }
 
 .point-3 {
-  
+  display: inline-block;
+  width: 200px;
+  height: 20px;
+  position: relative;
 }
