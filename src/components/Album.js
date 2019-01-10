@@ -121,6 +121,8 @@ onMouseLeave(song) {
    render() {
      return (
        <section className="album">
+       <img id="logo" src="/assets/images/bloc_jams_logo.png" width="100" height="50" alt="Bloc Jams Logo"/>
+
          <section id="album-info">
            <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
            <div className="album-details">
@@ -129,42 +131,18 @@ onMouseLeave(song) {
              <div id="release-info">{this.state.album.releaseInfo}</div>
           </div>
         </section>
-        <table id="song-list">
+        <table cellspacing="35" id="song-list">
           <colgroup>
             <col id="song-number-column" />
             <col id="song-title-column" />
             <col id="song-duration-column" />
           </colgroup>
-          <tr>
-            <th>Song Number</th>
-            <th>Song Title</th>
-            <th>Duration</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Blue</td>
-            <td>2:42</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Green</td>
-            <td>1:44</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Red</td>
-            <td>4:28</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Pink</td>
-            <td>2:33</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Magenta</td>
-            <td>6:14</td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Song Number</th>
+              <th>Title</th>
+            </tr>
+          </thead>
           <tbody>
             {this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)}
@@ -189,10 +167,12 @@ onMouseLeave(song) {
                   }
                   else {
                     return (index + 1)
+
                   };
                 }) ()}
+                </td>
               <td>{song.title}</td>
-              </td>
+
               </tr>
             )}
           </tbody>

@@ -109,7 +109,7 @@ body {
 #album-cover-art {
   position: absolute;
   left: 10px;
-  top: 20px;
+  top: 70px;
   padding: 10px;
 }
 
@@ -132,4 +132,19 @@ body {
 
 .album {
   margin-left: 400px;
+}
+
+.album #logo {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  padding:5px;
+}
+
+td, thead {
+  border-bottom: 1px solid #ddd;
+}
+
+.player-bar {
+
 }
