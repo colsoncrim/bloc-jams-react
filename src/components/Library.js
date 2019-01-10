@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import albumData from './../data/albums';
 
+const Collection = () => (
+  <section className="heading">
+    <img id="logo" src="/assets/images/bloc_jams_logo.png" width="100" height="50" alt="Bloc Jams Logo"/>
+    <h1 className="title">Collection</h1>
+  </section>
+)
+
 class Library extends Component {
   constructor(props) {
     super(props);
@@ -25,5 +32,7 @@ class Library extends Component {
     );
   }
 }
+
+
 
 export default Library;

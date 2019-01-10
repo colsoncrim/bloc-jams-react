@@ -135,6 +135,36 @@ onMouseLeave(song) {
             <col id="song-title-column" />
             <col id="song-duration-column" />
           </colgroup>
+          <tr>
+            <th>Song Number</th>
+            <th>Song Title</th>
+            <th>Duration</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Blue</td>
+            <td>2:42</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Green</td>
+            <td>1:44</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Red</td>
+            <td>4:28</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Pink</td>
+            <td>2:33</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Magenta</td>
+            <td>6:14</td>
+          </tr>
           <tbody>
             {this.state.album.songs.map( (song, index) =>
               <tr className="song" key={index} onClick={() => this.handleSongClick(song)}
