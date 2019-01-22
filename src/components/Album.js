@@ -160,7 +160,7 @@ onMouseLeave(song) {
                       <span className="ion-md-pause"></span>
                     )
                   }
-                  if (!this.state.isPlaying && this.state.currentSong === song) {
+                  if (this.state.isPlaying && this.state.currentSong === song) {
                     return (
                       <span className="ion-md-play"></span>
                     )

@@ -19,7 +19,9 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*
+   align-items: center;
+  */
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -27,6 +29,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App nav {
+  margin-right: 1300px;
+  font-family: Roboto;
 }
 
 @keyframes App-logo-spin {
@@ -40,7 +47,7 @@
 
 body {
     background-image: linear-gradient(to bottom right, #2C75FF, #00FFFF);
-    font-family: Roboto;
+    /* font-family: Roboto; */
     height:200vh;
     color: white;
 }
@@ -106,6 +113,18 @@ body {
   position: relative;
 }
 
+#musicalNote {
+  margin-left: 65px;
+}
+
+#radioWaves {
+  margin-left: 55px;
+}
+
+#iphone {
+  margin-left: 55px;
+}
+
 #album-cover-art {
   position: absolute;
   left: 10px;
@@ -141,10 +160,75 @@ body {
   padding:5px;
 }
 
+.library a {
+  text-decoration: none;
+  color: white;
+}
+
+.library img {
+  width: 300px;
+  height: auto;
+  margin-top: 100px;
+}
+
+.library table {
+  margin-left: 70px;
+}
+
+.libraryTitle {
+  float: right;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  margin-right: 50px;
+}
+
+
+nav {
+  width: 100%;
+}
+
+.App img {
+  display:flex;
+  justify-content: space-between;
+}
+
+#album-cover-art {
+  width: 400px;
+  height: auto;
+  margin-top: 50px;
+}
+
+#album-title {
+  font-size: 30px;
+  margin-left: -500px;
+  margin-top: 50px;
+  line-height: 1.6;
+}
+
+.artist {
+  font-size: 30px;
+  margin-left: -500px;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+#release-info {
+  font-size: 20px;
+  margin-left: -500px;
+  margin-top: 30px;
+}
+
+#song-list {
+  width: 1000px;
+  margin-top: 250px;
+  margin-left: -220px;
+}
+
 td, thead {
   border-bottom: 1px solid #ddd;
 }
 
 .player-bar {
-
+  margin-left: -400px;
 }
