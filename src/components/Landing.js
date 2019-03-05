@@ -4,7 +4,7 @@ const Landing = () => (
   <main className="landing">
 
     <section className="hero-image-wrapper">
-        <h1 className="hero-title">Turn the music up!</h1>
+        <h1 className="hero-title"></h1>
     </section>
 
         <img id="headphones" src="/assets/images/adult-back-view-blur-374876.jpg" width="100%" alt="Black album"/>

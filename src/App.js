@@ -13,7 +13,7 @@ class App extends Component {
          <nav>
           <div>
             < Link to='/'><img src="/assets/images/bloc_jams_logo.png" alt="Bloc Jams Landing" /></Link>
-            < Link className="libraryTitle" to='/library'>Collection</Link>
+            < Link className="libraryTitle" to='/library'>Albums</Link>
           </div>
          </nav>
        </header>
