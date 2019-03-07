@@ -12,7 +12,7 @@ class App extends Component {
        <header>
          <nav>
           <div className="nav">
-            < Link to='/'><img src="/assets/images/beat_stream_3.png" alt="Beat Stream Landing" /></Link>
+            < Link to='/'><img src="/assets/images/soundbytes_logo_3.png" alt="Sound Bytes Landing" /></Link>
             < Link className="libraryTitle" to='/library'>ALBUMS</Link>
           </div>
          </nav>

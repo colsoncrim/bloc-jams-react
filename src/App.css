@@ -18,12 +18,13 @@ body {
 
 nav {
   width: 100%;
+  height: 100px;
 }
 
 .nav img {
-  width: 100px;
+  width: 130px;
   margin-left: 15px;
-  margin-top: 5px;
+  margin-top: -10px;
 }
 
 .landing #headphones {
@@ -111,6 +112,7 @@ nav {
   margin-right: 50px;
   margin-top: 40px;
 }
+
 
 #album-title {
   font-size: 30px;
