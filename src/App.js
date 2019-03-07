@@ -11,9 +11,9 @@ class App extends Component {
       <div className="App">
        <header>
          <nav>
-          <div>
-            < Link to='/'><img src="/assets/images/bloc_jams_logo.png" alt="Bloc Jams Landing" /></Link>
-            < Link className="libraryTitle" to='/library'>Albums</Link>
+          <div className="nav">
+            < Link to='/'><img src="/assets/images/beat_stream_3.png" alt="Beat Stream Landing" /></Link>
+            < Link className="libraryTitle" to='/library'>ALBUMS</Link>
           </div>
          </nav>
        </header>

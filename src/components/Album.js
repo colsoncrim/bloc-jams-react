@@ -121,7 +121,6 @@ onMouseLeave(song) {
    render() {
      return (
        <section className="album">
-       <img id="logo" src="/assets/images/bloc_jams_logo.png" width="100" height="50" alt="Bloc Jams Logo"/>
 
          <section id="album-info">
            <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
@@ -140,7 +139,7 @@ onMouseLeave(song) {
           <thead>
             <tr>
               <th>Song Number</th>
-              <th>Title</th>
+              <th>Song Title</th>
             </tr>
           </thead>
           <tbody>
